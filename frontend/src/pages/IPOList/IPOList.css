@@ -1,0 +1,193 @@
+.ipo-list-page {
+  min-height: 100vh;
+  padding: 48px 0;
+}
+
+.page-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.ipo-list-container {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ipo-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ipo-table thead {
+  background-color: var(--secondary-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ipo-table th {
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.ipo-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.ipo-row {
+  cursor: pointer;
+}
+
+.ipo-row:hover {
+  background-color: var(--secondary-bg);
+}
+
+.ipo-table td {
+  padding: var(--spacing-lg);
+}
+
+/* Company Info */
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+  flex-shrink: 0;
+}
+
+.company-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.company-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.issue-date {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* Issue Size */
+.issue-size {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Price Range */
+.price-range {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Min Investment */
+.min-investment {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.min-investment .amount {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.min-investment .lot-size {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ipo-list-page {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .ipo-table {
+    display: block;
+  }
+
+  .ipo-table thead {
+    display: none;
+  }
+
+  .ipo-table tbody {
+    display: block;
+  }
+
+  .ipo-table tr {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+  }
+
+  .ipo-table td {
+    display: block;
+    padding: var(--spacing-sm) 0;
+    border: none;
+  }
+
+  .ipo-table td:not(:first-child) {
+    padding-left: 0;
+  }
+
+  .ipo-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .company-info {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .ipo-table td:first-child::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-logo {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-lg);
+  }
+
+  .company-name {
+    font-size: var(--text-sm);
+  }
+
+  .issue-date,
+  .min-investment .lot-size {
+    font-size: var(--text-xs);
+  }
+}

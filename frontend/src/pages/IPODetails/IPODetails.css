@@ -1,0 +1,480 @@
+.ipo-details-page {
+  min-height: 100vh;
+  padding: 32px 0;
+}
+
+.page-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+/* Mobile Back Button - Hidden on Desktop */
+.mobile-back-button {
+  display: none;
+}
+
+.back-button-mobile {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.back-button-mobile:hover {
+  background: var(--secondary-bg);
+}
+
+/* Breadcrumb - Desktop */
+.breadcrumb-desktop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.breadcrumb-link {
+  color: var(--accent-red);
+  cursor: pointer;
+}
+
+.breadcrumb-separator {
+  color: var(--text-muted);
+}
+
+.breadcrumb-current {
+  color: var(--text-secondary);
+}
+
+
+/* Header */
+.ipo-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  background: var(--card-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.back-button {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.back-button:hover {
+  background: var(--border-color);
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+}
+
+.company-logo-large {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-3xl);
+  flex-shrink: 0;
+}
+
+.company-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.company-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.company-subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.download-button {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+}
+
+.download-button:hover {
+  background: var(--border-color);
+}
+
+.apply-button {
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--button-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.apply-button:hover {
+  background: var(--button-hover);
+}
+
+/* Cards */
+.details-card,
+.timeline-card,
+.about-card {
+  background: var(--card-bg);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--secondary-bg);
+  border-radius: var(--radius-md);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.detail-label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.detail-value {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.detail-value.positive {
+  color: var(--accent-green);
+}
+
+.detail-value.negative {
+  color: var(--accent-red);
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+}
+
+.timeline-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-indicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.timeline-indicator.completed {
+  background: var(--accent-green);
+}
+
+.timeline-indicator.pending {
+  background: var(--border-color);
+}
+
+.timeline-content {
+  margin-top: var(--spacing-md);
+  text-align: center;
+}
+
+.timeline-stage {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline-date {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+
+/* About */
+.about-text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ipo-details-page {
+    padding: 24px 0;
+  }
+
+  /* Hide Desktop Breadcrumb */
+  .breadcrumb-desktop {
+    display: none;
+  }
+
+  /* Show Mobile Back Button (outside card) */
+  .mobile-back-button {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  /* Hide Desktop Back Button (inside card) */
+  .back-button {
+    display: none;
+  }
+
+  /* Mobile Header Card Layout */
+  .ipo-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+    align-items: stretch;
+  }
+
+  .company-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 100%;
+    padding: var(--spacing-md) 0;
+  }
+
+  .company-logo-large {
+    width: 56px;
+    height: 56px;
+    font-size: var(--text-2xl);
+  }
+
+  .company-title {
+    font-size: var(--text-lg);
+    font-weight: 700;
+  }
+
+  .company-subtitle {
+    font-size: var(--text-xs);
+  }
+
+  .header-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    width: 100%;
+    justify-content: space-between;
+    margin-top: var(--spacing-md);
+  }
+
+  .download-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .apply-button {
+    flex: 1;
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--text-base);
+    font-weight: 600;
+  }
+
+  .details-card,
+  .timeline-card,
+  .about-card {
+    padding: var(--spacing-lg);
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-item {
+    border-right: none;
+  }
+
+  .detail-item:nth-last-child(-n+1) {
+    border-bottom: none;
+  }
+
+
+  /* Mobile Timeline - Vertical Layout */
+  .timeline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .timeline-item:not(:last-child)::before {
+    display: none;
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-indicator {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .timeline-connector {
+    display: none;
+  }
+
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 32px;
+    width: 2px;
+    height: calc(100% + var(--spacing-lg));
+    z-index: 0;
+  }
+
+  .timeline-item.completed::after {
+    background: var(--accent-green);
+  }
+
+  .timeline-item.pending::after {
+    background: var(--border-color);
+  }
+
+  .timeline-item:last-child::after {
+    display: none;
+  }
+
+  .timeline-content {
+    margin-top: 0;
+    text-align: left;
+    flex: 1;
+  }
+
+  .timeline-stage {
+    font-size: var(--text-sm);
+  }
+
+  .timeline-date {
+    font-size: var(--text-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .company-logo-large {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-lg);
+  }
+
+  .company-title {
+    font-size: var(--text-lg);
+  }
+
+  .company-subtitle {
+    font-size: var(--text-xs);
+  }
+
+  .download-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .apply-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--text-sm);
+  }
+
+  .section-title {
+    font-size: var(--text-base);
+  }
+}
